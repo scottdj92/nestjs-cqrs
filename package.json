@@ -1,0 +1,23 @@
+{
+  "name": "nestjs-cqrs",
+  "version": "1.0.0",
+  "description": "a repo for creating a nestjs graphql server with CQRS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsnd -r tsconfig-paths/register --respawn --ignore-watch node_modules src/main.ts"
+  },
+  "author": "Scott Jones",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^7.3.2",
+    "@nestjs/core": "^7.3.2",
+    "@nestjs/graphql": "^7.5.5",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.0",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.52",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.7"
+  }
+}
