@@ -1,5 +1,6 @@
 import { NestFactory } from "@nestjs/core";
 import { Logger } from "@nestjs/common";
+import path from "path";
 import { AppModule } from "./AppModule";
 
 async function main() {
