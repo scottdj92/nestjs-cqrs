@@ -13,4 +13,11 @@ export class CartResolver {
             name: `hello, ${id}`
         }
     }
+
+    @Query(_ => [Cart])
+    async carts(
+        @Args("ids") ids: string[]
+    ): Promise<any[]> {
+        return ids.map((id) => ({ name: `hello, ${id}`}))
+    }
 }

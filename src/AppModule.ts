@@ -6,7 +6,7 @@ import { CartModule } from "@app/cart/CartModule";
     imports: [
         GraphQLModule.forRoot({
             path: "/graphql",
-            autoSchemaFile: true,
+            autoSchemaFile: "src/schema.graphql",
         }),
         CartModule,
     ]
