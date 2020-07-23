@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { GraphQLModule } from "@nestjs/graphql";
 import { CartModule } from "@app/cart/CartModule";
+import { ItemModule } from "@app/item/ItemModule";
 
 @Module({
     imports: [
@@ -9,6 +10,7 @@ import { CartModule } from "@app/cart/CartModule";
             autoSchemaFile: "src/schema.graphql",
         }),
         CartModule,
+        ItemModule,
     ]
 })
 export class AppModule { }

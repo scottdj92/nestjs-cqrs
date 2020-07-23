@@ -1,23 +1,23 @@
-import { Resolver, Query, Args } from "@nestjs/graphql";
+import { Resolver, Query, Args, Mutation } from "@nestjs/graphql";
 import { Cart } from "./Cart";
 
 @Resolver(Cart)
 export class CartResolver {
-    constructor() { }
-
     @Query(_ => Cart)
     async cart(
         @Args("id") id: string,
-    ): Promise<any> {
+    ): Promise<Cart> {
         return {
-            name: `hello, ${id}`
+            name: `hello, ${id}`,
+            items: [],
         }
     }
 
-    @Query(_ => [Cart])
-    async carts(
-        @Args("ids") ids: string[]
-    ): Promise<any[]> {
-        return ids.map((id) => ({ name: `hello, ${id}`}))
-    }
+    // @Query(() => [Cart])
+    // async carts(
+    //     @Args("ids") ids: string[],
+    // ): Promise<Cart[]> {
+    //     return [];
+    //     // return ids.map((id) => ({ name: `hello, ${id}`}))
+    // }
 }
