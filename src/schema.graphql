@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input AddCartItemsInput {
+  id: String!
+  items: [ItemInput!]!
+}
+
+type Cart {
+  name: String!
+  items: [Item!]!
+  grandTotal: Int!
+}
+
+type Item {
+  sku: String!
+}
+
+input ItemInput {
+  sku: String!
+}
+
+type Mutation {
+  addItem(input: AddCartItemsInput!): Cart!
+}
+
+type Query {
+  cart(id: String!): Cart!
+  item(id: String!): Item!
+}
